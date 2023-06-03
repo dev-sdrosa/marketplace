@@ -1,0 +1,31 @@
+// Variables
+$font-size: 1.4rem !default;
+$input-font-size: 1.4rem !default;
+$button-font-size: 1.4rem !default;
+
+$primary-color: #5142FC  !default;
+$link-color: $primary-color !default;
+
+$lazy-image-background: #7A798A;
+
+$body-text: #EBEBEB !default;
+$light-text: #FFFFFF !default;
+$dark-text: #8A8AA0 !default;
+$headings-text: $light-text !default;
+
+@font-face {
+    font-family: Urbanist;
+    src: url("../../assets/fonts/urbanist/urbanist-variable.ttf");
+}
+
+$font-family: 'Urbanist', sans-serif !default;
+
+$breakpoints: (
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px,
+	xlst: 1920px
+);
