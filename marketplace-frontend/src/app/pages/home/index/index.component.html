@@ -1,1 +1,542 @@
-<p>index works!</p>
+<section class="showcase">
+    <div class="container d-flex">
+        <div class="row">
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="nft-detail nft-lg">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mr-4">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="nft-detail nft-sm nft-shadow">
+                            <div class="text-content">
+                                <h5>"Hamlet Contemplates...</h5>
+                                <span>Graphic Art 3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="categories">
+    <div class="container">
+        <h2>All Catergories</h2>
+        <div class="row">
+            <div class="col-12 d-flex carousel-wrap">
+                <div (click)="owlCar.prev()" class="controller left-controller">
+                    <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.805244 12.0245L11.9306 0.899387C12.1879 0.641869 12.5314 0.5 12.8976 0.5C13.2639 0.5 13.6074 0.641869 13.8647 0.899387L14.684 1.71849C15.2171 2.25222 15.2171 3.11969 14.684 3.65262L5.34179 12.9948L14.6944 22.3474C14.9517 22.6049 15.0938 22.9482 15.0938 23.3142C15.0938 23.6807 14.9517 24.024 14.6944 24.2817L13.8751 25.1006C13.6175 25.3581 13.2743 25.5 12.908 25.5C12.5417 25.5 12.1982 25.3581 11.9409 25.1006L0.805244 13.9653C0.547319 13.707 0.405655 13.3621 0.406467 12.9954C0.405655 12.6273 0.547319 12.2826 0.805244 12.0245Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="owl-wrapper" >
+                    <owl-carousel-o #owlCar [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>   
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="category-slide">
+                                <div class="category-img">
+            
+                                </div>
+                                <span>Digital Art</span>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+                <div (click)="owlCar.next()" class="controller right-controller">
+                    <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.805244 12.0245L11.9306 0.899387C12.1879 0.641869 12.5314 0.5 12.8976 0.5C13.2639 0.5 13.6074 0.641869 13.8647 0.899387L14.684 1.71849C15.2171 2.25222 15.2171 3.11969 14.684 3.65262L5.34179 12.9948L14.6944 22.3474C14.9517 22.6049 15.0938 22.9482 15.0938 23.3142C15.0938 23.6807 14.9517 24.024 14.6944 24.2817L13.8751 25.1006C13.6175 25.3581 13.2743 25.5 12.908 25.5C12.5417 25.5 12.1982 25.3581 11.9409 25.1006L0.805244 13.9653C0.547319 13.707 0.405655 13.3621 0.406467 12.9954C0.405655 12.6273 0.547319 12.2826 0.805244 12.0245Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section class="top-picks">
+    <div class="container">
+        <div class="head">
+            <h2>Top Picks</h2>
+            <div class="order-actions">
+                <div class="sort-by">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 7H21" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M10 17H14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>
+                        Sort By: Recently Added
+                    </span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.55717 4.9652C2.74957 4.76472 3.05064 4.74649 3.2628 4.91053L3.32358 4.9652L7.99844 9.83623L12.6733 4.9652C12.8657 4.76472 13.1668 4.74649 13.3789 4.91053L13.4397 4.9652C13.6321 5.16569 13.6496 5.47941 13.4922 5.70048L13.4397 5.76382L8.38164 11.0344C8.18924 11.2349 7.88817 11.2531 7.67601 11.0891L7.61523 11.0344L2.55717 5.76382C2.34553 5.54329 2.34553 5.18573 2.55717 4.9652Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="nfts-wrap">
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div><div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nft">
+                <div class="nft-head">
+                    <div class="creator">
+                        <div class="creator-img">
+
+                        </div>
+                        <div class="creator-detail">
+                            <span>Creator</span>
+                            <span>Tyler Covington</span>
+                        </div>
+                    </div>
+                    <div class="reactions">
+                        <svg class="favorited" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="12" version="1" id="heart">
+                            <path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3C11 4.9 9.4 4 7.6 4 4.7 4 2.2 6.4 2.2 9.4z"></path>
+                        </svg>
+                        <span class="reaction-counter">
+                            100
+                        </span>
+                    </div>
+                </div>
+                <div class="nft-image">
+
+                </div>
+                <div class="nft-content">
+                    <span class="description">"Hamlet Comtemplates...</span>
+                    <div class="price-wrap">
+                        <span class="price-title">Price</span><span class="price">20.50$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="load-more-wrap">
+            <button class="btn load-more">
+                Load More
+            </button>
+        </div>
+    </div>
+</section>
+<section class="create-and-sell">
+    <div class="container">
+        <div class="row">
+            <div class="description col-5">
+                <div class="text-wrapper">
+                    <h2>Create NFT</h2>
+                    <h3>Create and sell your NFTs</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sollicitudin morbi donec 
+                        venenatis sed eget pellentesque viverra ut. 
+                        Elementum nam praesent mauris auctor amet, 
+                        pulvinar adipiscing ultricies ut. 
+                        Id dignissim tristique ultrices arcu tempor. Aenean quam odio fringilla amet, imperdiet.
+                    </p>
+                </div>
+            </div>
+            <div class="features col-7">
+                <div class="feature">
+                    <div class="feature-svg">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="60" rx="16" fill="#9835FB"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3945 25.8885C21.3945 23.1625 23.0595 21.3955 25.6365 21.3955H34.3525C36.9385 21.3955 38.6035 23.1625 38.6035 25.8885V31.1905C38.1575 30.8125 36.8105 29.8715 36.6225 29.7595C35.2225 28.9195 33.5425 29.2995 32.4525 30.7195C32.3575 30.8445 30.7805 33.1445 30.2225 33.4885C30.0935 33.5685 29.9575 33.6115 29.8125 33.6315C29.4625 33.6615 29.1255 33.4815 28.5525 33.0985C28.2225 32.8885 27.8625 32.6495 27.4525 32.4795C25.7475 31.7665 24.4485 32.9445 23.7565 33.7345C23.7475 33.7425 21.8105 36.1045 21.7795 36.1415C21.5365 35.5505 21.3945 34.8675 21.3945 34.1025V25.8885ZM40 25.888C40 22.362 37.731 20 34.354 20H25.638C22.271 20 20 22.362 20 25.888V34.102C20 35.674 20.447 37.013 21.238 38.009C21.247 38.018 21.247 38.028 21.256 38.028C22.043 39.013 23.166 39.666 24.519 39.899C24.531 39.901 24.543 39.903 24.556 39.905C24.903 39.962 25.262 40 25.638 40H34.354C34.535 40 34.7 39.966 34.874 39.953C35.078 39.936 35.289 39.932 35.483 39.898C35.74 39.854 35.976 39.777 36.215 39.703C36.319 39.67 36.43 39.65 36.53 39.612C36.773 39.52 36.996 39.401 37.217 39.279C37.297 39.235 37.383 39.199 37.461 39.15C37.678 39.014 37.875 38.855 38.068 38.689C38.132 38.634 38.201 38.584 38.262 38.526C38.45 38.347 38.616 38.15 38.775 37.944C38.824 37.879 38.876 37.819 38.923 37.752C39.076 37.534 39.208 37.299 39.33 37.054C39.364 36.983 39.4 36.914 39.433 36.842C39.546 36.585 39.64 36.316 39.72 36.034C39.741 35.958 39.762 35.883 39.78 35.805C39.851 35.514 39.902 35.214 39.935 34.9C39.939 34.862 39.95 34.827 39.954 34.789C39.961 34.704 39.96 34.619 39.965 34.534C39.973 34.388 40 34.253 40 34.102V25.888Z" fill="white"/>
+                            <path d="M26.5048 28.999C27.8663 28.999 29 27.8689 29 26.514C29 25.8346 28.7151 25.2121 28.2607 24.7605C27.8081 24.2924 27.1764 23.999 26.4787 23.999C25.1085 23.999 24 25.1031 24 26.4677C24 26.6481 24.0213 26.8228 24.0591 26.9927C24.2878 28.1247 25.3081 28.999 26.5048 28.999Z" fill="white" fill-opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Add your NFTs</h4>
+                        <p>
+                            Sed ut perspiciatis un de omnis iste natus error sit voluptatem accusantium 
+                            doloremque laudantium, totam rem.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-svg">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="60" rx="16" fill="#47A432"/>
+                            <path d="M25.104 18H21.048C19.368 18 18 19.38 18 21.0732V25.164C18 26.868 19.368 28.2359 21.048 28.2359H25.104C26.796 28.2359 28.1519 26.868 28.1519 25.164V21.0732C28.1519 19.38 26.796 18 25.104 18Z" fill="white"/>
+                            <path d="M25.104 31.7637H21.048C19.368 31.7637 18 33.1329 18 34.8369V38.9276C18 40.6196 19.368 41.9996 21.048 41.9996H25.104C26.796 41.9996 28.1519 40.6196 28.1519 38.9276V34.8369C28.1519 33.1329 26.796 31.7637 25.104 31.7637Z" fill="white"/>
+                            <path d="M38.9516 18H34.8956C33.2036 18 31.8477 19.38 31.8477 21.0732V25.164C31.8477 26.868 33.2036 28.2359 34.8956 28.2359H38.9516C40.6316 28.2359 41.9996 26.868 41.9996 25.164V21.0732C41.9996 19.38 40.6316 18 38.9516 18Z" fill="white" fill-opacity="0.4"/>
+                            <path d="M38.9516 31.7637H34.8956C33.2036 31.7637 31.8477 33.1329 31.8477 34.8369V38.9276C31.8477 40.6196 33.2036 41.9996 34.8956 41.9996H38.9516C40.6316 41.9996 41.9996 40.6196 41.9996 38.9276V34.8369C41.9996 33.1329 40.6316 31.7637 38.9516 31.7637Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Create your collection</h4>
+                        <p>
+                            Setting up your NFT collection and creating NFTs on NFTs is easy! 
+                            This guide explains how to set up your first collection
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-svg">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="60" rx="16" fill="#5142FC"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.9222 28.0176H41.1035C41.5983 28.0176 41.9995 28.3978 41.9995 28.8669V31.8192C41.9937 32.286 41.5959 32.6631 41.1035 32.6685H37.0182C35.8252 32.6837 34.7821 31.9095 34.5115 30.8081C34.376 30.1244 34.5662 29.4189 35.0312 28.8807C35.4961 28.3424 36.1883 28.0265 36.9222 28.0176ZM37.1048 31.1219H37.4995C38.0061 31.1219 38.4168 30.7326 38.4168 30.2524C38.4168 29.7722 38.0061 29.3829 37.4995 29.3829H37.1048C36.8625 29.3802 36.6292 29.4695 36.4568 29.631C36.2845 29.7924 36.1875 30.0126 36.1875 30.2423C36.1875 30.7242 36.5965 31.1164 37.1048 31.1219Z" fill="#F9F9FA" fill-opacity="0.4"/>
+                            <path d="M36.9227 26.2788H42C42 22.3154 39.5573 20 35.4187 20H24.5813C20.4427 20 18 22.3154 18 26.2282V34.7718C18 38.6846 20.4427 41 24.5813 41H35.4187C39.5573 41 42 38.6846 42 34.7718V34.4078H36.9227C34.5662 34.4078 32.656 32.5971 32.656 30.3635C32.656 28.1299 34.5662 26.3192 36.9227 26.3192V26.2788Z" fill="white"/>
+                            <path d="M30.4602 26.2791H23.6869C23.1785 26.2736 22.7695 25.8813 22.7695 25.3995C22.7754 24.9232 23.1844 24.54 23.6869 24.54H30.4602C30.9668 24.54 31.3775 24.9293 31.3775 25.4096C31.3775 25.8898 30.9668 26.2791 30.4602 26.2791Z" fill="#948BFB"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Set up your wallet</h4>
+                        <p>
+                            Wallet that is functional for NFT purchasing. 
+                            You may have a Coinbase account at this point, but very few are actually set up to buy an NFT.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-svg">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="60" height="60" rx="16" fill="#DF4949"/>
+                            <rect x="23" y="24" width="13" height="4" fill="white" fill-opacity="0.4"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.125 18H33.8375C37.225 18 39.9625 19.284 40 22.5478V40.7631C40 40.9671 39.95 41.1711 39.85 41.3511C39.6875 41.6391 39.4125 41.8551 39.075 41.9511C38.75 42.0471 38.3875 41.9991 38.0875 41.8311L29.9875 37.9432L21.875 41.8311C21.6888 41.9259 21.475 41.9871 21.2625 41.9871C20.5625 41.9871 20 41.4351 20 40.7631V22.5478C20 19.284 22.75 18 26.125 18ZM25.2758 27.144H34.6883C35.2258 27.144 35.6633 26.7228 35.6633 26.196C35.6633 25.668 35.2258 25.248 34.6883 25.248H25.2758C24.7383 25.248 24.3008 25.668 24.3008 26.196C24.3008 26.7228 24.7383 27.144 25.2758 27.144Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>List them for sale</h4>
+                        <p>
+                            Choose between auctions, fixed-price listings, and declining-price listings. 
+                            You choose how you want to sell your NFTs!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

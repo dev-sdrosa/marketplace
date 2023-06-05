@@ -1,0 +1,43 @@
+@import 'config/_variables';
+
+.notification-wrap {
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-secondary;
+    position: relative;
+    cursor: pointer;
+
+    .notification {
+        position: absolute;
+        top: -4px;
+        left: 25px;
+        background: red;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        span {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            color: $light-text;
+        }
+    }
+
+    svg {
+        width: 17px;
+        height: 20px;
+    }
+
+    svg:hover {
+
+    }
+}

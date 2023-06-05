@@ -1,0 +1,151 @@
+@import 'config/_variables';
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #0D0D11;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        .brand-description-wrap {
+            display: flex;
+            flex-direction: column;
+    
+            .logo-wrap {
+                display: flex;
+                align-items: center;
+    
+                span {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 30px;
+                    text-transform: capitalize;
+                    height: 36px;
+                    margin-left: 10px;
+                    color: $light-text;
+                }
+            }
+            .description {
+                max-width: 239px;
+                margin-top: 12px;
+
+                p {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 22px;
+                    color: $light-text;
+                    margin: 0;
+                }
+            }
+        }
+        nav.footer-nav-wrap {
+            width: 468px;
+            display: flex;
+            justify-content: space-between;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li:first-child {
+                    a {
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+
+                li:not(li:first-child) {
+                    margin-top: 10px;
+
+                    a {
+                        font-weight: 300;
+                        font-size: 12px;
+                        
+                    }
+                }
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: 'Urbanist';
+                        font-style: normal;
+                        text-transform: capitalize;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .subscribe-wrap {
+            .subscribe-head {
+                span {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 26px;
+                    text-transform: capitalize;
+                    color: $light-text;
+                }
+            }
+
+            .subscription-field {
+                position: relative;
+                margin-bottom: 20px;
+
+                input {
+                    background: none;
+                    border: 1px solid rgba(52, 52, 68, 1);
+                    border-radius: 10px;
+                    padding: 8px;
+                    margin-top: 15px;
+                    width: 100%;
+                    outline: none;
+
+                    height: 42px;
+                    padding-left: 23px;
+                    padding-right: 46px;
+
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: $dark-text;
+
+                }
+
+                .send {
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                    background: $primary-color;
+                    padding: 8px;
+                    width: 40px;
+                    height: 42px;
+                    border-radius: 0 10px 10px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+
+            .social-medias {
+                display: flex;
+                justify-content: space-between;
+                width: 293px;
+            }
+        }
+    }
+}
+
