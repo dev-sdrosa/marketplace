@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   ],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

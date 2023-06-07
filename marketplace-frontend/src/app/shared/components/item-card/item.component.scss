@@ -1,0 +1,136 @@
+@import 'config/_variables';
+
+.nft {
+    background: #343444;
+    padding: 18px;
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+
+    .nft-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .creator {
+            display: flex;
+            align-items: center;
+
+            .creator-img {
+                width: 32px;
+                height: 32px;
+                background: #7A798A;
+                border-radius: 10px;
+                margin-right: 9px;
+            }
+
+            .creator-detail {
+                display: flex;
+                flex-direction: column;
+
+                span:first-child {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 11px;
+                    color: #8A8AA0;
+                }
+
+                span:last-child {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    color: #EBEBEB;
+                }
+            }
+        }
+
+        .reactions {
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: black;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 5px;
+                width: 19px;
+                height: 19px;
+                cursor: pointer;
+
+                path {
+                    stroke: white;
+                    transition: 0.2s;
+                }
+            }
+
+            .favorited {
+                path {
+                    stroke: red !important;
+                    fill: red;
+                }
+            }
+
+            svg:hover {
+                path {
+                    stroke: red !important;
+                    fill: red;
+                }
+            }
+
+            span {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 11px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .nft-image {
+        background: #7A798A;
+        border-radius: 18px;
+        height: 232px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .nft-content {
+        span:first-child {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 28px;
+            color: #FFFFFF;
+        }
+
+        .price-wrap {
+            .price-title {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                color: #8A8AA0;
+                margin-right: 4px;
+            }
+
+            .price {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

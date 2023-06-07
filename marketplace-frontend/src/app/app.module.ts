@@ -16,6 +16,7 @@ import { ProfileModule } from './pages/profile/profile.module';
 import { HomeModule } from './pages/home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,

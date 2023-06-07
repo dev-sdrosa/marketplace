@@ -4,6 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NotificationComponent } from './components/notification/notification.component';
+import { ItemComponent } from './components/item-card/item.component';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 
 
@@ -11,7 +13,9 @@ import { NotificationComponent } from './components/notification/notification.co
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NotificationComponent
+    NotificationComponent,
+    ItemComponent,
+    ItemListComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,10 @@ import { NotificationComponent } from './components/notification/notification.co
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotificationComponent,
+    ItemComponent,
+    ItemListComponent
   ],
 })
 export class SharedModule { }
