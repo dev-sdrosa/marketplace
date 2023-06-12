@@ -12,9 +12,9 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { ShopModule } from './pages/shop/shop.module';
 import { AuthModule } from './pages/auth/auth.module';
-import { ProfileModule } from './pages/profile/profile.module';
 import { HomeModule } from './pages/home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserModule } from './pages/user/user.module';
 
 
 @NgModule({
@@ -27,9 +27,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     AuthModule,
     HomeModule,
-    ProfileModule,
     ShopModule,
     SharedModule,
+    UserModule,
     BrowserAnimationsModule,
     StoreModule.forRoot(appReducers, { metaReducers }),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),

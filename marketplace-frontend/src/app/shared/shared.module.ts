@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { NotificationComponent } from './components/notification/notification.component';
 import { ItemComponent } from './components/item-card/item.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
+import { SectionHeaderComponent } from './components/section-header/section-header.component';
+import { TabClickDirective } from './directives/tab-click.directive';
 
 
 
@@ -15,7 +17,9 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     FooterComponent,
     NotificationComponent,
     ItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    SectionHeaderComponent,
+    TabClickDirective
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,9 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     FooterComponent,
     NotificationComponent,
     ItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    SectionHeaderComponent,
+    TabClickDirective
   ],
 })
 export class SharedModule { }

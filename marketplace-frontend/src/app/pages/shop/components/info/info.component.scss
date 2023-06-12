@@ -1,0 +1,99 @@
+@import 'config/_variables';
+
+.personas {
+    height: 227px;
+    overflow-y: scroll;
+    padding-right: 20px;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+
+    .persona-card {
+        display: flex;
+        margin-top: 21px;
+        margin-bottom: 21px;
+
+        .image-wrap {
+            position: relative;
+
+            .img {
+                width: 44px;
+                height: 44px;
+                background: #7A798A;
+                border-radius: 13px;
+            }
+
+            svg {
+                position: absolute;
+                top: 32px;
+                right: -1px;
+            }
+        }
+
+        .info-wrap {
+            display: flex;
+            width: 100%;
+
+            .info-of-sell {
+                display: flex;
+                flex-direction: column;
+                margin-left: 12px;
+                width: 100%;
+
+                .user-info {
+                    display: flex;
+                    align-items: center;
+
+                    .username {
+                        font-family: 'Urbanist';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: #FFFFFF;
+                        margin-right: 8px;
+                    }
+
+                    .action {
+                        font-family: 'Urbanist';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        color: #EBEBEB;
+                    }
+                }
+
+                .amount {
+                    font-family: 'Urbanist';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #EBEBEB;
+                }
+            }
+
+            .timestamp {
+                font-family: 'Urbanist';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: right;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .divider {
+        border: 1px solid #1F1F2C;
+    }
+}
+
+.personas::-webkit-scrollbar {
+    background: #343444;
+    width: 2px;
+}
+
+.personas::-webkit-scrollbar-thumb {
+    background: #EBEBEB;
+    border-radius: 100px;
+}

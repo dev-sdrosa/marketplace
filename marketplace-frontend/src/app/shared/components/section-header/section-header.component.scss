@@ -1,0 +1,43 @@
+
+
+.header-wrap {
+    background: #343444;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .breadcrumb {
+        margin: 0;
+        justify-content: space-around;
+        width: 279px;
+
+        span {
+            font-family: 'Urbanist';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .crumb {
+            color: #8A8AA0;
+        }
+
+        .last-crumb {
+            color: #FFFFFF;
+        }
+
+
+    }
+}

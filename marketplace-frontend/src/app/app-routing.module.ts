@@ -21,8 +21,8 @@ const routes: Routes = [
 				loadChildren: () => import( './pages/shop/shop.module' ).then( m => m.ShopModule ),
 			},
 			{
-				path: 'profile',
-				loadChildren: () => import( './pages/profile/profile.module' ).then( m => m.ProfileModule ),
+				path: 'user',
+				loadChildren: () => import( './pages/user/user.module' ).then( m => m.UserModule ),
 			},
 		]
 	},

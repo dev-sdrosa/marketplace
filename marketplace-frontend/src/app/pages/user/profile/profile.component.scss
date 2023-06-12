@@ -1,0 +1,192 @@
+@import 'config/_variables';
+
+section.profile {
+    background: #14141F;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .profile-details {
+        .main-content {
+            background: rgb(122 121 138 / 16%);
+            border-radius: 8px 8px 0 0;
+            padding: 40px;
+            padding-bottom: 34px;
+            display: flex;
+            justify-content: space-between;
+    
+            .profile-content {
+                display: flex;
+    
+                .profile-image {
+                    margin-right: 40px;
+                    position: relative;
+                    width: 274px;
+                    height: 208px;
+    
+                    .img {
+                        width: 274px;
+                        height: 274px;
+                        background: #7A798A;
+                        border-radius: 10px;
+                        position: absolute;
+                    }
+                }
+                
+                .profile {
+    
+                    .author-title {
+                        span {
+                            font-family: 'Urbanist';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 18px;
+                            text-align: center;
+                            color: #EBEBEB;
+                        }
+                    }
+    
+                    .author-name {
+                        span {
+                            font-family: 'Urbanist';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 36px;
+                            text-transform: capitalize;
+                            color: #FFFFFF;
+                        }
+                    }
+    
+                    .author-description {
+                        margin-bottom: 24px;
+    
+                        p {
+                            font-family: 'Urbanist';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 22px;
+                            color: #EBEBEB;
+                            max-width: 471px;
+                            margin: 0;
+                        }
+                    }
+    
+                    .copy-wrap {
+                        .copy {
+                            background: #EBEBEB;
+                            border-radius: 50px;
+                            max-width: 189px;
+                            padding: 8px 20px;
+                            padding-right: 30px;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+    
+                            span {
+                                font-family: 'Urbanist';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 13px;
+                                color: #7A798A;
+                            }
+    
+                            svg {
+                                position: absolute;
+                                right: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .profile-actions {
+                .cta-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            
+                    .btn.new-nft {
+                        width: 100%;
+                        border: 1px solid white;
+                        border-radius: 20px;
+                        font-family: $font-family;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: $light-text;
+                        padding: 10px;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        transition: 0.4s;
+                    }
+            
+                    .btn.new-nft:hover {
+                        background: linear-gradient(45deg, rgba(226, 80, 229, 1), rgb(75, 80, 230));
+                        border: 1px solid rgba(0,0,0,0.0);
+                    }
+                }
+            }
+        }
+    
+        .profile-tabs {
+            border-radius: 0 0 8px 8px;
+            background: #343444;
+            padding: 24px 100px;
+            padding-left: 40px;
+    
+            .tabs {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+    
+                span:first-child {
+                    margin-right: 135px;
+                }
+    
+                span {
+                    font-family: 'Urbanist';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .items-lists {
+        margin-top: 60px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+
+    .load-more-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .btn.load-more {
+            width: 131px;
+            border: 1px solid white;
+            border-radius: 20px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FFFFFF;
+            padding: 10px;
+            transition: 0.4s;
+        }
+
+        .btn.load-more:hover {
+            background: linear-gradient(45deg, rgba(226, 80, 229, 1), rgb(75, 80, 230));
+            border: 1px solid rgba(0,0,0,0.0);
+        }
+    }
+}
