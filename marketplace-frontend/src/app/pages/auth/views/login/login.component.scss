@@ -211,3 +211,13 @@ section.login {
         }
     }
 }
+
+.ng-valid[required]:not(form), 
+.ng-valid.required:not(form), 
+.ng-touched.ng-valid:not(form)  {
+    outline: 1px solid #42A948 !important; /* green */
+}
+
+.ng-touched.ng-invalid:not(form)  {
+    outline: 1px solid #ff302c !important; /* red */
+}

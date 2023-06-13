@@ -4,9 +4,25 @@
         <div class="head">
             <h3>Login to NFTs</h3>
         </div>
-        <form class="form-wrap">
-            <input placeholder="Username" type="text" class="username">
-            <input placeholder="Password" type="password" class="password">
+        <form #LoginForm="ngForm" class="form-wrap">
+            <input 
+                [(ngModel)]="loginForm.email" 
+                #email="ngModel"
+                name="email"
+                required 
+                placeholder="Username" 
+                type="email" 
+                class="email"
+            >
+            <input 
+                [(ngModel)]="loginForm.password" 
+                #password="ngModel"
+                name="password"
+                required 
+                placeholder="Password" 
+                type="password" 
+                class="password"
+            >
         </form>
         <div class="form-actions-wrap">
             <div class="checkbox-wrap">
@@ -37,7 +53,7 @@
             </div>
         </div>
         <div class="cta-wrap">
-            <button class="btn login">
+            <button [disabled]="!LoginForm.valid" (click)="login(LoginForm)" class="btn login">
                 <span>Login</span>
             </button>
         </div>

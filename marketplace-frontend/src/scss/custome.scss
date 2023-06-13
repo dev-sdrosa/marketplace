@@ -1,1 +1,12 @@
 @import 'config/_variables';
+
+
+.ng-valid[required]:not(form), 
+.ng-valid.required:not(form), 
+.ng-touched.ng-valid:not(form)  {
+    border-bottom: 1px solid #42A948 !important; /* green */
+}
+
+.ng-touched.ng-invalid:not(form)  {
+    border-bottom: 1px solid #ff302c !important; /* red */
+}
