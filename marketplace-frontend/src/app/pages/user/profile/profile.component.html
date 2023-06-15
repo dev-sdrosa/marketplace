@@ -12,7 +12,7 @@
                             <span>Author Profile</span>
                         </div>
                         <div class="author-name">
-                            <span>Author Profile</span>
+                            <span>{{ user.username | titlecase }}</span>
                         </div>
                         <div class="author-description">
                             <p>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="copy-wrap">
                             <div class="copy">
-                                <span>example@gmail.com</span>
+                                <span>{{ user.email }}</span>
                                 <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.92188 4.45312H6.875V1.40625C6.875 0.630844 6.24416 0 5.46875 0H0.546875V14.125H11.3281V5.85938C11.3281 5.08397 10.6973 4.45312 9.92188 4.45312Z" fill="#7A798A"/>
                                 </svg>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="profile-actions">
                     <div class="cta-wrap">
-                        <button class="btn new-nft">
+                        <button routerLink="/user/new-item" class="btn new-nft">
                             <span>New NTF</span>
                         </button>
                     </div>
@@ -42,26 +42,24 @@
                 <div class="image-space">
 
                 </div>
-                <div class="tabs">
-                    <span>Favorites</span>
-                    <span>Bought Items</span>
+                <div class="tabs" role="tablist">
+                    <span class="active" tabClick role="tab">
+                        Favorites Items
+                        <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0L24 10H0L12 0Z" fill="#14141F"/>
+                        </svg>
+                    </span>
+                    <span tabClick role="tab">
+                        Bought Items
+                        <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0L24 10H0L12 0Z" fill="#14141F"/>
+                        </svg>
+                    </span>
                 </div>
             </div>
         </div>
         <div class="items-lists">
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-        </div>
-        <div class="load-more-wrap">
-            <button class="btn load-more">
-                Load More
-            </button>
+            <app-items-list [itemsData]="itemsData" [count]="count"></app-items-list>
         </div>
     </div>
 </section>

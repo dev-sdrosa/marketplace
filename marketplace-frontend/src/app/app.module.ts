@@ -21,6 +21,11 @@ import { authReducer } from './pages/auth/store/auth.reducers';
 import { AuthEffects } from './pages/auth/store/auth.effects';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InternalInterceptor } from './shared/services/internal.interceptor';
+import { AuthInterceptor } from './pages/auth/services/auth.interceptor';
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://3.87.231.179:5000', options: {} };
 
 
 @NgModule({
@@ -45,9 +50,10 @@ import { InternalInterceptor } from './shared/services/internal.interceptor';
     EffectsModule.forRoot([AuthEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     StoreDevtoolsModule.instrument(),
+    SocketIoModule.forRoot(config)
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: InternalInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

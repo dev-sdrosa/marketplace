@@ -5,7 +5,7 @@ export interface User {
 }
 
 export interface AuthData {
-	user: User;
+	logedUser: User;
 	token: string;
 }
 

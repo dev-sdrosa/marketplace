@@ -1,0 +1,15 @@
+<div *ngIf="itemsData" class="item-list">
+    <div class="nfts-wrap {{layout}}">
+        <ng-container *ngIf="layout == 'grid'" >
+            <app-item-card *ngFor="let item of itemsData.data" [item]="item"></app-item-card>
+        </ng-container>
+        <ng-container *ngIf="layout == 'list'" >
+            <app-item-list *ngFor="let item of itemsData.data" [item]="item"></app-item-list>
+        </ng-container>
+    </div>
+    <div *ngIf="itemsData.total != count && itemsData.total != 0" class="load-more-wrap">
+        <button (click)="changePageSize()" class="btn load-more">
+            Load More
+        </button>
+    </div>
+</div>

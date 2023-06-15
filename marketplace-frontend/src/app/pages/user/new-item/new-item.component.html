@@ -5,7 +5,12 @@
         <div class="new-item-container">
             <div class="preview-wrap">
                 <h5>Preview</h5>
-                <app-item-card></app-item-card>
+                <app-item-card-demo [item]="{
+                    name: newItemForm.name,
+                    description: newItemForm.description,
+                    price: newItemForm.price,
+                    image: newItemForm.image
+                }"></app-item-card-demo>
                 <div class="save-wrap">
                     <button class="btn save">
                         Save Item

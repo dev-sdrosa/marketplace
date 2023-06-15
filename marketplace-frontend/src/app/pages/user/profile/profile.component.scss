@@ -151,6 +151,24 @@ section.profile {
                     font-size: 20px;
                     line-height: 26px;
                     color: #FFFFFF;
+                    position: relative;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    svg {
+                        display: none;
+                        transition: 0.3s;
+                    }
+
+                }
+
+                .active {
+                    svg {
+                        display: block;
+                        position: absolute;
+                        left: 45%;
+                        top: 42px;
+                    }
                 }
             }
         }
@@ -158,10 +176,78 @@ section.profile {
 
     .items-lists {
         margin-top: 60px;
+    }
+
+    .load-more-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .btn.load-more {
+            width: 131px;
+            border: 1px solid white;
+            border-radius: 20px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FFFFFF;
+            padding: 10px;
+            transition: 0.4s;
+        }
+
+        .btn.load-more:hover {
+            background: linear-gradient(45deg, rgba(226, 80, 229, 1), rgb(75, 80, 230));
+            border: 1px solid rgba(0,0,0,0.0);
+        }
+    }
+}
+
+section.top-picks {
+    background-color: #1F1F2C;
+
+    .head {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            margin: 0;
+        }
+
+        .order-actions {
+            .sort-by {
+                border: 1px solid rgba(60, 60, 86, 1);
+                padding: 9px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+
+                svg:first-child {
+                    margin-right: 12px;
+                }
+
+                span {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: $light-text;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+
+    .nfts-wrap {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 30px;
+        
     }
 
     .load-more-wrap {

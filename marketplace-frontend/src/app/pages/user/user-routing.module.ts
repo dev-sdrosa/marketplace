@@ -6,11 +6,16 @@ import { NewItemComponent } from './new-item/new-item.component';
 
 const routes: Routes = [
   {
-    path: ":author",
+    path: "detail",
     component: ProfileComponent,
   },
   {
-    path: ":author/new-item",
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'detail',
+  },
+  {
+    path: "new-item",
     component: NewItemComponent,
   },
 ];

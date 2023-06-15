@@ -84,60 +84,12 @@
                 </div>
                 <div class="owl-wrapper" >
                     <owl-carousel-o #owlCar [options]="customOptions">
-                        <ng-template carouselSlide>
+                        <ng-template *ngFor="let cat of categories" carouselSlide>
                             <div class="category-slide">
-                                <div class="category-img">
+                                <div (click)="routeToShopCategory(cat._id)" class="category-img">
             
                                 </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>   
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
-                            </div>
-                        </ng-template>
-                        <ng-template carouselSlide>
-                            <div class="category-slide">
-                                <div class="category-img">
-            
-                                </div>
-                                <span>Digital Art</span>
+                                <span>{{ cat.name | titlecase }}</span>
                             </div>
                         </ng-template>
                     </owl-carousel-o>
@@ -155,40 +107,12 @@
 <section class="top-picks">
     <div class="container">
         <div class="head">
-            <h2>Top Picks</h2>
+            <h2>Our People NFTs</h2>
             <div class="order-actions">
-                <div class="sort-by">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 7H21" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M6 12H18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M10 17H14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>
-                        Sort By: Recently Added
-                    </span>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.55717 4.9652C2.74957 4.76472 3.05064 4.74649 3.2628 4.91053L3.32358 4.9652L7.99844 9.83623L12.6733 4.9652C12.8657 4.76472 13.1668 4.74649 13.3789 4.91053L13.4397 4.9652C13.6321 5.16569 13.6496 5.47941 13.4922 5.70048L13.4397 5.76382L8.38164 11.0344C8.18924 11.2349 7.88817 11.2531 7.67601 11.0891L7.61523 11.0344L2.55717 5.76382C2.34553 5.54329 2.34553 5.18573 2.55717 4.9652Z" fill="white"/>
-                    </svg>
-                </div>
+                <app-order-filter></app-order-filter>
             </div>
         </div>
-        <div class="nfts-wrap">
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-            <app-item-card></app-item-card>
-        </div>
-        <div class="load-more-wrap">
-            <button class="btn load-more">
-                Load More
-            </button>
-        </div>
+        <app-items-list [itemsData]="itemsData"></app-items-list>
     </div>
 </section>
 <section class="create-and-sell">

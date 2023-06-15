@@ -52,7 +52,8 @@ export class AuthEffects {
                                 return { type: 'DUMMY' };
                             }
                             const decode: any = jwt_decode(resp.data.token);
-                            return handleAuthentication(resp.data.user._id, resp.data.user.username, resp.data.user.email, resp.data.token, decode.exp);
+                            console.log(resp)
+                            return handleAuthentication(resp.data.logedUser._id, resp.data.logedUser.username, resp.data.logedUser.email, resp.data.token, decode.exp);
                         }),
                         catchError((errorResponse: HttpErrorResponse) => {
                             console.log('first', errorResponse);
@@ -62,6 +63,41 @@ export class AuthEffects {
             })
         )
     );
+
+    autoLogin$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(AuthActions.AUTO_LOGIN),
+      map(() => {
+        const userData: {
+          _id: string;
+          username: string;
+          email: string;
+          _token: string;
+          _tokenExpirationDate: string;
+        } = JSON.parse(localStorage.getItem('userData'));
+        if (!userData) {
+          return { type: 'DUMMY' }; 
+        }
+
+        const tokenExpirationDate = new Date(userData._tokenExpirationDate);
+        const loadedUser = new AuthData(
+          userData._id,
+          userData.username,
+          userData.email,
+          userData._token,
+          tokenExpirationDate
+        );
+
+        if (loadedUser.token) {
+          const expirationDuration = tokenExpirationDate.getTime() - new Date().getTime();
+          this.authService.startLogoutTimer(expirationDuration);
+          return new AuthActions.AuthenticateSuccess(loadedUser, false);
+        }
+
+        return { type: 'DUMMY' }; 
+      })
+    )
+  );
 
     authLogout$ = createEffect(() =>
         this.actions$.pipe(

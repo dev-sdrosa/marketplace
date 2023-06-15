@@ -12,7 +12,6 @@ export class SectionHeaderComponent {
   headTitle: string;
 
   @Input({ required: true })
-  @Input()
   breadCrumb: BreadCrumb[];
 
 }

@@ -1,0 +1,35 @@
+@import 'config/_variables';
+
+
+.select-container {
+    position: relative;
+
+    .sort-by {
+        border: 1px solid rgba(60, 60, 86, 1);
+        padding: 9px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    
+        svg:first-child {
+            margin-right: 12px;
+        }
+    
+        span {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 26px;
+            color: $light-text;
+            margin-right: 12px;
+            user-select: none;
+        }
+    
+        
+    }
+   
+}

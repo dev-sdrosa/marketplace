@@ -24,7 +24,7 @@ export class AuthService {
             password: password
         }
 
-        return this.http.post<UserResponse>(`${'api/signin'}`, body);
+        return this.http.post<UserResponse>(`${'api/signin'}`, body, { headers: {skip: "true"} });
     }
 
     public register(
@@ -38,7 +38,7 @@ export class AuthService {
             password: password
         }
 
-        return this.http.post<RegisterUserResponse>(`${'api/signup'}`, body);
+        return this.http.post<RegisterUserResponse>(`${'api/signup'}`, body, { headers: {skip: "true"} });
     }
 
     startLogoutTimer(expirationDuration: number) {

@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { History, ItemDetail } from 'src/app/shared/schemas/item-card.schema';
 import { BreadCrumb } from 'src/app/shared/schemas/section-header.schema';
+import { ItemService } from 'src/app/shared/services/item.service';
+import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-item-details',
   templateUrl: './item-details.component.html',
   styleUrls: ['./item-details.component.scss']
 })
-export class ItemDetailsComponent {
+export class ItemDetailsComponent implements OnInit {
+
+  item: ItemDetail;
+  historyRaw: History[];
+  // history: any[];
+  itemId: string;
 
   breadCrumb: BreadCrumb[] = [
     {
@@ -22,5 +32,50 @@ export class ItemDetailsComponent {
       route: "/shop/items/items-details-1"
     }
   ]
+
+  constructor(
+    private itemService: ItemService,
+    private toastService: ToastrService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    this.itemId = this.route.snapshot.paramMap.get('itemId');
+
+    if (this.itemId) {
+      this.itemService.getItem(this.itemId).subscribe(
+        rp => this.item = rp.data
+      );
+      this.itemService.getItemHistory(this.itemId).subscribe(
+        rp => {
+          this.historyRaw = rp.data;
+          // this.processHistory();
+        }
+      )
+    } else {
+      this.router.navigate(['/shop']);
+    }
+  }
+
+  // processHistory() {
+  //   let history = this.historyRaw.filter(h => h.item == this.itemId);;
+
+  //   // concat requests in one
+  //   for (let h of history) {
+  //     this.userService.getUser(h.user).subscribe(
+  //       rp => this.history.push(rp.data)
+  //     )
+  //   }
+    
+  // }
+
+  buyItem() {
+    this.itemService.ownItem(this.itemId).subscribe(
+      rp => this.toastService.success('Item owned successfully!')
+    )
+  }
 
 }

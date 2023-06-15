@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ItemCard } from '../../schemas/item-card.schema';
+import { ItemService } from '../../services/item.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-item-list',
@@ -6,5 +9,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent {
+
+  @Input()
+	item: ItemCard;
+
+  constructor(
+    private itemService: ItemService,
+    private toastService: ToastrService
+  ) {
+
+  }
+
+  ngOnInit(): void {
+
+  }
+
+
+  buyItem() {
+    this.itemService.ownItem(this.item._id).subscribe(
+      rp => this.toastService.success('Item owned successfully!')
+    )
+  }
 
 }

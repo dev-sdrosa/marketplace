@@ -290,6 +290,21 @@ section.details {
                         }
                     }
                 }
+
+                .tab-content {
+                    .technical-details {
+                        margin-top: 20px;
+
+                        p {
+                            font-family: $font-family;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 22px;
+                            color: $light-text;
+                        }
+                    }
+                }
             }
         }
     }

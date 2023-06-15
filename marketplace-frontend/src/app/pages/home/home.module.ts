@@ -12,7 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     CarouselModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class HomeModule { }

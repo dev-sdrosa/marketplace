@@ -6,16 +6,11 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
   {
-    path: ':type',
+    path: '',
     component: ExploreComponent,
   },
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'grid',
-  },
-  {
-    path: 'item/:itemName',
+    path: 'item/:itemId',
     component: ItemDetailsComponent
   }
 ];

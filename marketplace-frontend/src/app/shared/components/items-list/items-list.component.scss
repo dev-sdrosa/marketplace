@@ -1,0 +1,43 @@
+@import 'config/_variables';
+
+.item-list {
+    .nfts-wrap {
+        width: 100%;
+        display: grid;
+        gap: 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .load-more-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .btn.load-more {
+            width: 131px;
+            border: 1px solid white;
+            border-radius: 20px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FFFFFF;
+            padding: 10px;
+            transition: 0.4s;
+        }
+
+        .btn.load-more:hover {
+            background: linear-gradient(45deg, rgba(226, 80, 229, 1), rgb(75, 80, 230));
+            border: 1px solid rgba(0,0,0,0.0);
+        }
+    }
+}

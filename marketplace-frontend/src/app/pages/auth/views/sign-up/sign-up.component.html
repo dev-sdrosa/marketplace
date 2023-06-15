@@ -4,14 +4,46 @@
         <div class="head">
             <h3>Signup to NFTs</h3>
         </div>
-        <form class="form-wrap">
-            <input placeholder="Username" type="text" class="username">
-            <input placeholder="Email" type="email" class="email">
-            <input placeholder="Password" type="password" class="password-1">
-            <input placeholder="Confirm your password" type="password" class="password-2">
+        <form #RegisterForm="ngForm" [mustMatch]="['password1', 'password2']" autocomplete="off" class="form-wrap">
+            <input
+                [(ngModel)]="registerForm.username" 
+                #username="ngModel"
+                name="username"
+                required  
+                placeholder="Username" 
+                type="text" 
+                class="username"
+            >
+            <input 
+                [(ngModel)]="registerForm.email" 
+                #email="ngModel"
+                name="email"
+                required  
+                placeholder="Email" 
+                type="email" 
+                class="email"
+            >
+            <input
+                [(ngModel)]="registerForm.password1" 
+                #password1="ngModel"
+                name="password1"
+                required 
+                placeholder="Password" 
+                type="password" 
+                class="password1"
+            >
+            <input
+                [(ngModel)]="registerForm.password2" 
+                #password2="ngModel"
+                name="password2"
+                required  
+                placeholder="Confirm your password" 
+                type="password" 
+                class="password2"
+            >
         </form>
         <div class="cta-wrap">
-            <button class="btn login">
+            <button [disabled]="!RegisterForm.valid" (click)="register(RegisterForm)" class="btn login">
                 <span>Singup</span>
             </button>
         </div>
