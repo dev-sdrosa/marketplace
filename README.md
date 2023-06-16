@@ -68,7 +68,8 @@ This `SERVER_URL` and `SOCKET_URL` are the actual backend for this test demostra
 - A new tab on profile detail that show items purchased
 - Favorite list of items should show creator name (Or ownership)
 - Filter items by price ranges (At a functional level)
-
+- Item names bug fix (Backend side)
+- Buy history with real data
 
 
 ## Contact
