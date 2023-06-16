@@ -61,7 +61,6 @@ This `SERVER_URL` and `SOCKET_URL` are the actual backend for this test demostra
 
 ## Room for Improvement
 
-Room for improvement:
 - Add responsive design
 - Loading state of components with ngrx
 - A route to see others user details
