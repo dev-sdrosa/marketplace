@@ -4,7 +4,7 @@
 .new-item {
     background: #14141F;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 128px;
 
     .new-item-container {
         display: flex;
@@ -106,7 +106,7 @@
                     }
                 
                     .btn.upload {
-                        width: 131px;
+                        max-width: 167px;
                         border: 1px solid white;
                         border-radius: 20px;
                         font-family: $font-family;
@@ -125,11 +125,15 @@
                     //     border: 1px solid rgba(0,0,0,0.0);
                     // }
                 }
+
+                .hidden-input {
+                    display: none;
+                }
             }
 
             .category-wrap {
                 .dropdown-wrap {
-                    max-width: 216px;
+                    max-width: 167px;
                     justify-content: space-between;
                     display: flex;
                     align-items: center;
@@ -147,6 +151,105 @@
                 }
             }
             
+        }
+    }
+}
+
+
+
+.select-container {
+    position: relative;
+
+    .category-wrap {
+        cursor: pointer;
+    
+        .selected {
+            margin-right: 8px;
+            font-size: 14px;
+            font-family: $font-family;
+        }
+    
+        .caret {
+            position: relative;
+            top: 1px;
+            right: -3px;
+            width: 11px;
+            height: 11px;
+            transition: 0.3s;
+        }
+    
+        .rotate-caret {
+            transform: rotate(180deg);
+        }
+    }
+    
+    .dropdown-list {
+        max-width: 167px;
+        width: 100%;
+        top: 100px;
+        border: 1px solid #343444;
+        border-radius: 8px;
+        background: #14141F;
+        padding: 8px 20px;
+
+        list-style: none;
+        margin: 0;
+        display: block;
+        position: absolute;
+        left: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transform: translateY(-1em);
+        transition: transform 0.3s;
+        visibility: hidden;
+    
+        li {
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 3px;
+            
+            span {
+                font-size: 14px;
+                color: #707070;
+                font-family: $font-family;
+            }
+    
+            span:hover {
+                color: $light-text;
+            }
+    
+            svg {
+                visibility: hidden;
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 6px;
+                right: 0;
+
+                path {
+                    fill: white;
+                }
+            }
+    
+            
+        }
+        
+        
+    }
+    
+    .show-dropdown {
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 999;
+
+        .selected-value {
+            span {
+                color: $light-text;
+            }
+    
+            svg {
+                visibility: visible;
+            }
         }
     }
 }

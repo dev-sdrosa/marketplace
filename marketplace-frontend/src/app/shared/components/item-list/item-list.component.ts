@@ -24,10 +24,17 @@ export class ItemListComponent {
 
   }
 
+  addToFavorite() {
+    this.itemService.addFavoriteItem(this.item._id).subscribe(
+      rp => this.toastService.success('Item added to favorite!'),
+      err => this.toastService.warning('Authenticate first')
+    )
+  }
 
   buyItem() {
     this.itemService.ownItem(this.item._id).subscribe(
-      rp => this.toastService.success('Item owned successfully!')
+      rp => this.toastService.success('Item owned successfully!'),
+      err => this.toastService.warning('Authenticate first')
     )
   }
 

@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { NewItemComponent } from './new-item/new-item.component';
+import { ProfileComponent } from './views/profile/profile.component';
+import { NewItemComponent } from './views/new-item/new-item.component';
+import { AuthGuard } from '../auth/services/auth.guard';
 
 
 const routes: Routes = [
   {
     path: "detail",
     component: ProfileComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
   },
   {
     path: '',
@@ -17,6 +20,8 @@ const routes: Routes = [
   {
     path: "new-item",
     component: NewItemComponent,
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
   },
 ];
 

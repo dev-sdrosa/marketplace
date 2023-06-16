@@ -25,7 +25,6 @@ export class ItemsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.layout)
   }
 
   changePageSize() {

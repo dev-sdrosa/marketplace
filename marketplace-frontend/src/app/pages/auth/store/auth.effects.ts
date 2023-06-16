@@ -26,7 +26,6 @@ const handleAuthentication = (
 };
 
 const handleError = (errorResponse: HttpErrorResponse) => {
-    console.log('Manejando el error..', errorResponse);
 
     return of(new AuthActions.AuthenticateFail(errorResponse.message));
 };
@@ -46,17 +45,14 @@ export class AuthEffects {
                         //   this.authService.startLogoutTimer(decode.exp * 1000)
                         // }),
                         map((resp: UserResponse) => {
-                            console.log(resp)
                             if (!resp.success) {
                                 this.toastrService.error('Usuario o contraseña incorrecta.');
                                 return { type: 'DUMMY' };
                             }
                             const decode: any = jwt_decode(resp.data.token);
-                            console.log(resp)
                             return handleAuthentication(resp.data.logedUser._id, resp.data.logedUser.username, resp.data.logedUser.email, resp.data.token, decode.exp);
                         }),
                         catchError((errorResponse: HttpErrorResponse) => {
-                            console.log('first', errorResponse);
                             return handleError(errorResponse)
                         })
                     );

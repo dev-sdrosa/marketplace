@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './views/profile/profile.component';
 import { UserRoutingModule } from './user-routing.module';
-import { NewItemComponent } from './new-item/new-item.component';
+import { FormsModule } from '@angular/forms';
+import { NewItemComponent } from './views/new-item/new-item.component';
 
 @NgModule({
   declarations: [
-  
     ProfileComponent,
-        NewItemComponent
+    NewItemComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule
   ]
 })
 export class UserModule { }

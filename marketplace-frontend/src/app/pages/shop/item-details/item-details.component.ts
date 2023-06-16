@@ -18,20 +18,7 @@ export class ItemDetailsComponent implements OnInit {
   // history: any[];
   itemId: string;
 
-  breadCrumb: BreadCrumb[] = [
-    {
-      routeName: "Home",
-      route: "/"
-    },
-    {
-      routeName: "Shop",
-      route: "/shop"
-    },
-    {
-      routeName: "Item Details 1",
-      route: "/shop/items/items-details-1"
-    }
-  ]
+  breadCrumb: BreadCrumb[] = [];
 
   constructor(
     private itemService: ItemService,
@@ -39,7 +26,6 @@ export class ItemDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) {
-
   }
 
   ngOnInit(): void {
@@ -47,7 +33,24 @@ export class ItemDetailsComponent implements OnInit {
 
     if (this.itemId) {
       this.itemService.getItem(this.itemId).subscribe(
-        rp => this.item = rp.data
+        rp => {
+          this.item = rp.data;
+          
+          this.breadCrumb = [
+            {
+              routeName: "Home",
+              route: "/"
+            },
+            {
+              routeName: "Shop",
+              route: "/shop"
+            },
+            {
+              routeName: "Item Details 1",
+              route: "/shop/item/" + this.item._id
+            }
+          ]
+        }
       );
       this.itemService.getItemHistory(this.itemId).subscribe(
         rp => {
@@ -72,9 +75,17 @@ export class ItemDetailsComponent implements OnInit {
     
   // }
 
+  addToFavorite() {
+    this.itemService.addFavoriteItem(this.item._id).subscribe(
+      rp => this.toastService.success('Item added to favorite!'),
+      err => this.toastService.warning('Authenticate first')
+    )
+  }
+
   buyItem() {
     this.itemService.ownItem(this.itemId).subscribe(
-      rp => this.toastService.success('Item owned successfully!')
+      rp => this.toastService.success('Item owned successfully!'),
+      err => this.toastService.warning('Authenticate first')
     )
   }
 

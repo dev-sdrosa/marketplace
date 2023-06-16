@@ -26,10 +26,6 @@ export class LoginComponent implements OnInit {
       route: "/"
     },
     {
-      routeName: "Pages",
-      route: "/Pages"
-    },
-    {
       routeName: "Login",
       route: "/login"
     }

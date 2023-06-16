@@ -46,7 +46,6 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private itemService: ItemService,
-    private socketService: SocketWebService,
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {
@@ -65,9 +64,7 @@ export class IndexComponent implements OnInit {
         // this.socketService.emitEvent(rp.data[0]);
       }
     );
-    this.socketService.outEven.subscribe(res => {
-      console.log(res)
-    })
+    
   }
 
 

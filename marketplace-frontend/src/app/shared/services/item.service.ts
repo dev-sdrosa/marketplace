@@ -72,4 +72,11 @@ export class ItemService {
     );
   }
 
+  public createItem(body) {
+    return this.http.post<any>(
+      "api/item", 
+      body,
+    );
+  }
+
 }

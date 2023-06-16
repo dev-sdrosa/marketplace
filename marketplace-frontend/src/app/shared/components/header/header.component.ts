@@ -7,6 +7,7 @@ import * as fromApp from 'src/app/core/ngrx/reducers/app.reducer';
 import * as AuthActions from 'src/app/pages/auth/store/auth.actions';
 import { getUserSelector, isAuthenticatedSelector } from 'src/app/pages/auth/store/auth.selectors';
 import { AuthData } from 'src/app/pages/auth/model/auth.model';
+import { SocketWebService } from '../../services/socket.service';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class HeaderComponent {
   constructor(
     private store: Store<fromApp.AppState>,
     public activeRoute: ActivatedRoute,
+    private socketService: SocketWebService,
   ) { }
 
   ngOnInit(): void {
@@ -31,10 +33,11 @@ export class HeaderComponent {
       .select(getUserSelector)
       .pipe(filter((auth): auth is AuthData => !!auth))
       .subscribe((rp) => {
-        console.log(rp);
         this.userId = rp._id;
         this.username = rp.username;
       });
+
+      
   }
 
   onLogout(event: Event) {

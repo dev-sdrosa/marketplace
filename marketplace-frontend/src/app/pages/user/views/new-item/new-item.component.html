@@ -1,0 +1,108 @@
+<app-section-header headTitle="Create Item" [breadCrumb]="breadCrumb"></app-section-header>
+
+<section class="new-item">
+    <div class="container">
+        <div class="new-item-container">
+            <div class="preview-wrap">
+                <h5>Preview</h5>
+                <app-item-card-demo [item]="{
+                    name: newItemForm.name,
+                    description: newItemForm.description,
+                    price: newItemForm.price,
+                    image: newItemForm.image,
+                    createdBy: user
+                }"></app-item-card-demo>
+                <div class="save-wrap">
+                    <button (click)="createItem()" class="btn save">
+                        Save Item
+                    </button>
+                </div>
+            </div>
+            <form #itemForm="ngForm" class="new-item-wrap">
+                <div class="upload-file-wrap">
+                    <label for="">Upload File</label>
+                    <div class="dropzone">
+                        <span *ngIf="!currentFile">PNG, or JPG. Max 200mb.</span>
+                        <span *ngIf="currentFile">Archivo: {{ currentFile.file.name }}</span>
+                        <button (click)="selectFile.click()" class="btn upload">
+                            Upload File
+                        </button>
+                    </div>
+                    <input 
+                        type="file" 
+                        class="hidden-input" 
+                        id="image" 
+                        placeholder="Nombre del menú"
+                        name="image"
+                        #selectFile
+                        (change)="onFileChange($event)" 
+                    >
+                </div>
+                <div class="price-wrap">
+                    <label for="price" class="price">Price</label>
+                    <input
+                        [(ngModel)]="newItemForm.price" 
+                        #price="ngModel"
+                        name="price"
+                        required 
+                        placeholder="Enter price for one item (USD)" 
+                        type="number" 
+                        name="price" 
+                        id="price"
+                    >
+                </div>
+                <div class="title-wrap">
+                    <label for="name" class="title">Title</label>
+                    <input
+                        [(ngModel)]="newItemForm.name" 
+                        #name="ngModel"
+                        name="name"
+                        required  
+                        placeholder="Item Name" 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                    >
+                </div>
+                <div class="description-wrap">
+                    <label for="description" class="description">Description</label>
+                    <textarea 
+                        [(ngModel)]="newItemForm.description" 
+                        #description="ngModel"
+                        name="description"
+                        required  
+                        placeholder="e.g. “This is very limited item”" 
+                        name="description" 
+                        id="description" 
+                        cols="30" 
+                        rows="10"
+                    >
+
+                    </textarea>
+                </div>
+               
+                <div class="select-container">
+
+                    <div (click)="onDropdown($event)" class="category-wrap">
+                        <label for="category">Category</label>
+                        <div class="dropdown-wrap">
+                            <span class="current-drop-value selected">
+                                {{ catValue ? catValue : 'Category' }}
+                            </span>
+                            <svg class="caret" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#8A8AA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                   
+                    <ul class="dropdown-list">
+                        <li *ngFor="let cat of categoriesData" (click)="onValueSelect($event, cat._id)">
+                            <span>{{ cat.name }}</span>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

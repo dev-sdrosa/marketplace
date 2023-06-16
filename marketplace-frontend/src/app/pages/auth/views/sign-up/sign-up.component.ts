@@ -26,12 +26,8 @@ export class SignUpComponent implements OnInit {
       route: "/"
     },
     {
-      routeName: "Pages",
-      route: "/Pages"
-    },
-    {
       routeName: "Sign Up",
-      route: "/signup"
+      route: "/auth/signup"
     }
   ]
 
@@ -65,7 +61,6 @@ export class SignUpComponent implements OnInit {
         this.registerForm.password1,
       ).subscribe(
         rp => {
-          console.log(rp)
           this.router.navigate(["auth/login"]).then(
             () => this.toastService.success("User created successfully! Proceed to login")
           )

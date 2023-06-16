@@ -16,6 +16,10 @@
         margin-left: 60px;
         margin-right: 60px;
 
+        .rigth-nav {
+            display: flex;
+        }
+
         .logo-wrap {
             position: relative;
             bottom: 2px;
@@ -66,8 +70,8 @@
 
         nav {
             display: flex;
-            justify-content: space-between;
-            width: 300px;
+            justify-content: right;
+            margin-right: 30px;
 
             ul {
                 padding: 0;

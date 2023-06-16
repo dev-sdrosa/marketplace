@@ -12,7 +12,6 @@ export class UserService {
   public getUser(userId: string) {
     return this.http.get<UserRP>(
       "api/user/" + userId, 
-    //   { headers: {skip: "true"} }
     );
   }
 

@@ -26,7 +26,8 @@ export class ItemComponent implements OnInit {
 
   addToFavorite() {
     this.itemService.addFavoriteItem(this.item._id).subscribe(
-      rp => this.toastService.success('Item added to favorite!')
+      rp => this.toastService.success('Item added to favorite!'),
+      err => this.toastService.warning('Authenticate first')
     )
   }
 	

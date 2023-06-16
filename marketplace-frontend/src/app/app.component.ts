@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import * as AuthActions from '../app/pages/auth/store/auth.actions';
+import { SocketWebService } from './shared/services/socket.service';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +12,11 @@ import * as AuthActions from '../app/pages/auth/store/auth.actions';
 export class AppComponent implements OnInit {
   constructor(
 		public store: Store<any>,
+    
 	) {}
 
   ngOnInit() {
     this.store.dispatch(new AuthActions.AutoLogin());
+    
   }
 }

@@ -14,70 +14,51 @@
                 Axies
             </span>
         </div>
-        <div class="search-bar">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_2037_836" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="17">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666016 0.666992H16.6852V16.3325H0.666016V0.666992Z" fill="white" stroke="white"/>
-                </mask>
-                <g mask="url(#mask0_2037_836)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.67613 1.87346C4.93962 1.87346 1.89975 4.84538 1.89975 8.49936C1.89975 12.1533 4.93962 15.1261 8.67613 15.1261C12.4118 15.1261 15.4517 12.1533 15.4517 8.49936C15.4517 4.84538 12.4118 1.87346 8.67613 1.87346ZM8.67612 16.3325C4.25942 16.3325 0.666016 12.8185 0.666016 8.49936C0.666016 4.18022 4.25942 0.666992 8.67612 0.666992C13.0928 0.666992 16.6854 4.18022 16.6854 8.49936C16.6854 12.8185 13.0928 16.3325 8.67612 16.3325Z" fill="#EBEBEB"/>
-                    <path d="M8.67613 1.37346C4.67414 1.37346 1.39975 4.55869 1.39975 8.49936H2.39975C2.39975 5.13207 5.2051 2.37346 8.67613 2.37346V1.37346ZM1.39975 8.49936C1.39975 12.44 4.67406 15.6261 8.67613 15.6261V14.6261C5.20517 14.6261 2.39975 11.8667 2.39975 8.49936H1.39975ZM8.67613 15.6261C12.6774 15.6261 15.9517 12.4399 15.9517 8.49936H14.9517C14.9517 11.8668 12.1462 14.6261 8.67613 14.6261V15.6261ZM15.9517 8.49936C15.9517 4.55873 12.6773 1.37346 8.67613 1.37346V2.37346C12.1463 2.37346 14.9517 5.13203 14.9517 8.49936H15.9517ZM8.67612 15.8325C4.52497 15.8325 1.16602 12.5319 1.16602 8.49936H0.166016C0.166016 13.1051 3.99386 16.8325 8.67612 16.8325V15.8325ZM1.16602 8.49936C1.16602 4.46689 4.5249 1.16699 8.67612 1.16699V0.166992C3.99393 0.166992 0.166016 3.89354 0.166016 8.49936H1.16602ZM8.67612 1.16699C12.8273 1.16699 16.1854 4.46683 16.1854 8.49936H17.1854C17.1854 3.89361 13.3584 0.166992 8.67612 0.166992V1.16699ZM16.1854 8.49936C16.1854 12.532 12.8272 15.8325 8.67612 15.8325V16.8325C13.3584 16.8325 17.1854 13.105 17.1854 8.49936H16.1854Z" fill="#EBEBEB"/>
-                </g>
-                <mask id="mask1_2037_836" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="12" y="12" width="6" height="6">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2012 13.2998H17.3333V17.3332H13.2012V13.2998Z" fill="white" stroke="white"/>
-                </mask>
-                <g mask="url(#mask1_2037_836)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7166 17.3332C16.5596 17.3332 16.4016 17.2745 16.2807 17.1571L13.3823 14.3307C13.1413 14.0951 13.1405 13.713 13.3815 13.4774C13.6217 13.2401 14.0123 13.2417 14.2541 13.4757L17.1526 16.3029C17.3935 16.5386 17.3944 16.9198 17.1534 17.1555C17.0333 17.2745 16.8746 17.3332 16.7166 17.3332Z" fill="#EBEBEB"/>
-                    <path d="M16.7166 17.3332C16.5595 17.3332 16.4016 17.2745 16.2807 17.1571L13.3823 14.3307C13.1413 14.0951 13.1405 13.713 13.3815 13.4774C13.6217 13.2401 14.0123 13.2417 14.2541 13.4757L17.1526 16.3029C17.3935 16.5386 17.3944 16.9198 17.1534 17.1555C17.0333 17.2745 16.8746 17.3332 16.7166 17.3332" stroke="#EBEBEB"/>
-                </g>
-            </svg>
-            <input type="search" placeholder="Type to search NFT...">
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li>
-                    <a routerLink="/">Home</a>
-                </li>
-                <li>
-                    <a routerLink="/shop">Shop</a>
-                </li>
-                <li>
-                    <a>Sellers</a>
-                </li>
-            </ul>
-        </nav>
-        <div *ngIf="isAuthenticated$ | async" class="authenticated profile-actions">
-            <app-notification></app-notification>
-            <div routerLink="/user/detail" class="profile-image">
-                <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(-546.269 -195.397)">
+        <div class="rigth-nav">
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a routerLink="/">Home</a>
+                    </li>
+                    <li>
+                        <a routerLink="/shop">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+            <div *ngIf="isAuthenticated$ | async" class="authenticated profile-actions">
+                <app-notification></app-notification>
+                <div routerLink="/user/detail" class="profile-image">
+                    <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(-546.269 -195.397)">
+                            <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
+                            <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
+                            <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="not-authenticated profile-actions">
+                    <button (click)="onLogout($event)" class="btn btn-primary">
+                        <span>
+                            Logout
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="(isAuthenticated$ | async) === false" class="not-authenticated profile-actions">
+                <button routerLink="/auth/login" class="btn btn-primary">
+                    <svg fill="#ffffff" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(-546.269 -195.397)">
                         <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
                         <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
                         <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="not-authenticated profile-actions">
-                <button (click)="onLogout($event)" class="btn btn-primary">
+                        </g>
+                    </svg>
                     <span>
-                        Logout
+                        Login
                     </span>
                 </button>
             </div>
         </div>
-        <div *ngIf="(isAuthenticated$ | async) === false" class="not-authenticated profile-actions">
-            <button routerLink="/auth/login" class="btn btn-primary">
-                <svg fill="#ffffff" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(-546.269 -195.397)">
-                    <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
-                    <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
-                    <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
-                    </g>
-                </svg>
-                <span>
-                    Login
-                </span>
-            </button>
-        </div>
+        
     </div>
 </header>

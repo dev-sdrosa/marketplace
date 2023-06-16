@@ -23,12 +23,8 @@ export class ProfileComponent implements OnInit {
       route: "/"
     },
     {
-      routeName: "Pages",
-      route: "/Pages"
-    },
-    {
       routeName: "Author",
-      route: "/Author"
+      route: "/user/detail"
     }
   ]
 
@@ -52,7 +48,6 @@ export class ProfileComponent implements OnInit {
     });
     this.itemService.getItemsFavorite(this.count).subscribe(
       rp => {
-        console.log(rp);
         rp.data.map(i => {
           return {...i, createdBy: {
             _id: this.user._id,

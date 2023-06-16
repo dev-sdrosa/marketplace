@@ -2,7 +2,7 @@
     <h2>{{ headTitle }}</h2>
     <div class="breadcrumb">
         <ng-container *ngFor="let c of breadCrumb; let last = last">
-            <span [class]="!last ? 'crumb' : 'last-crumb'">
+            <span [routerLink]="c.route" [class]="!last ? 'crumb' : 'last-crumb'">
                 {{ c.routeName }}
             </span>
             <span *ngIf="!last" class="crumb divider">/</span>

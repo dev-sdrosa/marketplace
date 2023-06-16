@@ -41,3 +41,123 @@
 
     }
 }
+
+
+.select-container {
+    position: relative;
+
+    
+
+    .notification-wrap {
+        cursor: pointer;
+    }
+    
+    .dropdown-list {
+        min-width: 223px;
+        box-shadow: 0 3px 6px 2px #45414e30;
+        width: 100%;
+        top: 45px;
+        border-radius: 8px;
+        background: #14141F;
+        padding: 20px 20px;
+        list-style: none;
+        margin: 0;
+        display: block;
+        position: absolute;
+        left: -189px;
+        transform: translateY(-1em);
+        transition: transform 0.3s;
+        visibility: hidden;
+
+        .notification-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title {
+                font-family: 'Urbanist';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 26px;
+                color: #FFFFFF;
+            }
+
+            small {
+                font-family: 'Urbanist';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 22px;
+                text-align: right;
+                text-transform: capitalize;
+                color: #7A798A;
+            }
+        }
+
+        .notification-body::-webkit-scrollbar {
+            background: #343444;
+            width: 2px;
+        }
+        
+        .notification-body::-webkit-scrollbar-thumb {
+            background: #EBEBEB;
+            border-radius: 100px;
+        }
+        
+        .notification-body {
+            max-height: 227px;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-top: 10px;
+
+            .notification {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 15px;
+
+                .image {
+                    width: 48px;
+                    height: 32px;
+                    background: #7A798A;
+                    margin-right: 16px;
+                    border-radius: 5px;
+                }
+
+                .content {
+                    display: flex;
+                    
+                    span {
+                        font-family: 'Urbanist';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: #EBEBEB;
+
+                        strong {
+                            color: #FFFFFF;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-family: 'Urbanist';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                color: #EBEBEB;
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .show-dropdown {
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 999;
+    }
+}
